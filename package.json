@@ -2,17 +2,23 @@
   "name": "next-component-library",
   "version": "1.0.0",
   "description": "Component library for use with Next.js or other React frameworks.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }, 
   "author": "Vanessa Ann Munson",
   "license": "ISC",
-  "devDependencies": {
-    "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.1",
+  "private": true, 
+  "workspaces": ["intricate", "demo-app"],
+  "scripts": {
+  "build": "yarn workspaces run build",
+  "dev": "yarn workspaces run dev",
+  "test": "yarn workspaces run test"
+  },
+  "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "typescript": "^5.7.2"
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^8"
   }
 }
