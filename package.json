@@ -4,21 +4,24 @@
   "description": "Component library for use with Next.js or other React frameworks.",
   "author": "Vanessa Ann Munson",
   "license": "ISC",
-  "private": true, 
-  "workspaces": ["intricate", "demo-app"],
+  "private": true,
+  "workspaces": [
+    "intricate",
+    "demo-app"
+  ],
   "scripts": {
-  "build": "yarn workspaces run build",
-  "dev": "yarn workspaces run dev",
-  "test": "yarn workspaces run test"
+    "build": "yarn workspaces run build",
+    "dev": "yarn workspaces run dev",
+    "test": "yarn workspaces run test"
   },
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.7.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^8"
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2"
   }
 }
