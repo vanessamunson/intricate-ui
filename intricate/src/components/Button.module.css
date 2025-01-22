@@ -1,0 +1,8 @@
+ /* These are not used, investigate why */
+ .button {
+    color: '#fafafa';
+    width: '90px';
+    height: '40px';
+    border: 'none';
+    borderRadius: '20px';
+};
