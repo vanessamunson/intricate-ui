@@ -1,5 +1,6 @@
 import React from 'react';
 import { getTheme } from '../Theme'; 
+import styles from './Button.module.css';
 
 type Props = {
     onClick?: () => void;
@@ -16,22 +17,21 @@ const Button: React.FC<Props> = ({
     style = {},
     children
 }) => {
+    console.log(styles.button);
     const { colors } = getTheme();
     const backgroundColor = color ? colors[color] : colors.primary;
 
-    const styles: React.CSSProperties = {
+    // Users cannot set the color to something other than default if they use className, style prop is more specific -- fix
+    // Rename variable
+    const defaultStyles: React.CSSProperties = {
         backgroundColor,
-        color: '#fafafa',
-        width: '90px',
-        height: '40px',
-        border: 'none',
-        borderRadius: '20px',
+        ...style,
     };
 
-    const allStyles = {...styles, ...style};
+    const defaultClasses = `${styles.button} ${className}`.trim();
 
     return (
-        <button onClick={onClick} className={className} style={allStyles}>
+        <button onClick={onClick} className={defaultClasses} style={defaultStyles}>
             {children}
         </button>
     );
