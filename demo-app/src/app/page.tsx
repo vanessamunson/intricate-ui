@@ -7,12 +7,9 @@ import {Button} from 'intricate';
 
 export default function Home() {
 
-  // Test button styles to put into the Button component
-  const testStyles = {
-    borderRadius: '10px',
-  };
-
   return (
-    <Button style={testStyles}>Test</Button>
+    <>
+      <Button className={styles.button}>Button</Button>
+    </>
   );
 }
